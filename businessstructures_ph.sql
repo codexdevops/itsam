@@ -1,0 +1,5 @@
+INSERT [gen].[BusinessStructure] ([BusinessStructureId],[Code],[Description],[CountryId],[IssuedByAgency])VALUES(1,'SOLE','Sole Proprietorship',175,'Department of Trade and Industry (DTI)')
+INSERT [gen].[BusinessStructure] ([BusinessStructureId],[Code],[Description],[CountryId],[IssuedByAgency])VALUES(2,'PARTNERSHIP','Partnership',175,'Department of Trade and Industry (DTI)')
+INSERT [gen].[BusinessStructure] ([BusinessStructureId],[Code],[Description],[CountryId],[IssuedByAgency])VALUES(3,'OPC','One Person Corporation (OPC)',175,'Securities and Exchange Commission (SEC)')
+INSERT [gen].[BusinessStructure] ([BusinessStructureId],[Code],[Description],[CountryId],[IssuedByAgency])VALUES(4,'CORP','Corporation',175,'Securities and Exchange Commission (SEC)')
+INSERT [gen].[BusinessStructure] ([BusinessStructureId],[Code],[Description],[CountryId],[IssuedByAgency])VALUES(5,'COOP','Cooperative',175,'Cooperative Development Authority (CDA)')
