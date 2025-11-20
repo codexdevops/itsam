@@ -1,83 +1,82 @@
-INSERT INTO gen.Province (ProvinceId, Code, Description) VALUES
-(1, 'ILN', 'Ilocos Norte'),
-(2, 'ILS', 'Ilocos Sur'),
-(3, 'LU', 'La Union'),
-(4, 'PAN', 'Pangasinan'),
-(5, 'BAT', 'Batanes'),
-(6, 'CAG', 'Cagayan'),
-(7, 'ISA', 'Isabela'),
-(8, 'NV', 'Nueva Vizcaya'),
-(9, 'QUI', 'Quirino'),
-(10, 'AUR', 'Aurora'),
-(11, 'BAT', 'Bataan'),
-(12, 'BUL', 'Bulacan'),
-(13, 'NE', 'Nueva Ecija'),
-(14, 'PAM', 'Pampanga'),
-(15, 'TAR', 'Tarlac'),
-(16, 'ZAM', 'Zambales'),
-(17, 'BAT', 'Batangas'),
-(18, 'CAV', 'Cavite'),
-(19, 'LAG', 'Laguna'),
-(20, 'QZN', 'Quezon'),
-(21, 'RZL', 'Rizal'),
-(22, 'MDQ', 'Marinduque'),
-(23, 'OCM', 'Occidental Mindoro'),
-(24, 'ORM', 'Oriental Mindoro'),
-(25, 'PAL', 'Palawan'),
-(26, 'RBL', 'Romblon'),
-(27, 'ALB', 'Albay'),
-(28, 'CAMN', 'Camarines Norte'),
-(29, 'CAMS', 'Camarines Sur'),
-(30, 'CAT', 'Catanduanes'),
-(31, 'MAS', 'Masbate'),
-(32, 'SOR', 'Sorsogon'),
-(33, 'ABR', 'Abra'),
-(34, 'APA', 'Apayao'),
-(35, 'BEN', 'Benguet'),
-(36, 'IFG', 'Ifugao'),
-(37, 'KAL', 'Kalinga'),
-(38, 'MP', 'Mountain Province'),
-(39, 'MM', 'Metro Manila'),
-(40, 'AKL', 'Aklan'),
-(41, 'ANT', 'Antique'),
-(42, 'CPZ', 'Capiz'),
-(43, 'GUI', 'Guimaras'),
-(44, 'ILO', 'Iloilo'),
-(45, 'NOC', 'Negros Occidental'),
-(46, 'BHL', 'Bohol'),
-(47, 'CBU', 'Cebu'),
-(48, 'NOR', 'Negros Oriental'),
-(49, 'SIQ', 'Siquijor'),
-(50, 'BIL', 'Biliran'),
-(51, 'ES', 'Eastern Samar'),
-(52, 'LEY', 'Leyte'),
-(53, 'NS', 'Northern Samar'),
-(54, 'SAM', 'Samar'),
-(55, 'SL', 'Southern Leyte'),
-(56, 'ZDN', 'Zamboanga del Norte'),
-(57, 'ZDS', 'Zamboanga del Sur'),
-(58, 'SIB', 'Zamboanga Sibugay'),
-(59, 'BKD', 'Bukidnon'),
-(60, 'CAM', 'Camiguin'),
-(61, 'LDN', 'Lanao del Norte'),
-(62, 'MOC', 'Misamis Occidental'),
-(63, 'MOR', 'Misamis Oriental'),
-(64, 'DDO', 'Davao de Oro'),
-(65, 'DDN', 'Davao del Norte'),
-(66, 'DDS', 'Davao del Sur'),
-(67, 'DOC', 'Davao Occidental'),
-(68, 'DOR', 'Davao Oriental'),
-(69, 'COT', 'Cotabato'),
-(70, 'SAR', 'Sarangani'),
-(71, 'SCOT', 'South Cotabato'),
-(72, 'SK', 'Sultan Kudarat'),
-(73, 'AND', 'Agusan del Norte'),
-(74, 'ADS', 'Agusan del Sur'),
-(75, 'DIS', 'Dinagat Islands'),
-(76, 'SDN', 'Surigao del Norte'),
-(77, 'SDS', 'Surigao del Sur'),
-(78, 'BAS', 'Basilan'),
-(79, 'LDS', 'Lanao del Sur'),
-(80, 'MAG', 'Maguindanao'),
-(81, 'SUL', 'Sulu'),
-(82, 'TAW', 'Tawi-Tawi');
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(1,'ILN','Ilocos Norte')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(2,'ILS','Ilocos Sur')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(3,'LU','La Union')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(4,'PAN','Pangasinan')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(5,'BAT','Batanes')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(6,'CAG','Cagayan')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(7,'ISA','Isabela')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(8,'NV','Nueva Vizcaya')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(9,'QUI','Quirino')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(10,'AUR','Aurora')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(11,'BAT','Bataan')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(12,'BUL','Bulacan')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(13,'NE','Nueva Ecija')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(14,'PAM','Pampanga')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(15,'TAR','Tarlac')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(16,'ZAM','Zambales')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(17,'BAT','Batangas')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(18,'CAV','Cavite')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(19,'LAG','Laguna')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(20,'QZN','Quezon')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(21,'RZL','Rizal')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(22,'MDQ','Marinduque')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(23,'OCM','Occidental Mindoro')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(24,'ORM','Oriental Mindoro')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(25,'PAL','Palawan')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(26,'RBL','Romblon')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(27,'ALB','Albay')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(28,'CAMN','Camarines Norte')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(29,'CAMS','Camarines Sur')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(30,'CAT','Catanduanes')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(31,'MAS','Masbate')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(32,'SOR','Sorsogon')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(33,'ABR','Abra')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(34,'APA','Apayao')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(35,'BEN','Benguet')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(36,'IFG','Ifugao')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(37,'KAL','Kalinga')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(38,'MP','Mountain Province')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(39,'MM','Metro Manila')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(40,'AKL','Aklan')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(41,'ANT','Antique')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(42,'CPZ','Capiz')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(43,'GUI','Guimaras')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(44,'ILO','Iloilo')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(45,'NOC','Negros Occidental')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(46,'BHL','Bohol')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(47,'CBU','Cebu')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(48,'NOR','Negros Oriental')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(49,'SIQ','Siquijor')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(50,'BIL','Biliran')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(51,'ES','Eastern Samar')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(52,'LEY','Leyte')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(53,'NS','Northern Samar')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(54,'SAM','Samar')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(55,'SL','Southern Leyte')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(56,'ZDN','Zamboanga del Norte')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(57,'ZDS','Zamboanga del Sur')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(58,'SIB','Zamboanga Sibugay')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(59,'BKD','Bukidnon')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(60,'CAM','Camiguin')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(61,'LDN','Lanao del Norte')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(62,'MOC','Misamis Occidental')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(63,'MOR','Misamis Oriental')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(64,'DDO','Davao de Oro')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(65,'DDN','Davao del Norte')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(66,'DDS','Davao del Sur')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(67,'DOC','Davao Occidental')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(68,'DOR','Davao Oriental')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(69,'COT','Cotabato')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(70,'SAR','Sarangani')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(71,'SCOT','South Cotabato')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(72,'SK','Sultan Kudarat')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(73,'AND','Agusan del Norte')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(74,'ADS','Agusan del Sur')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(75,'DIS','Dinagat Islands')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(76,'SDN','Surigao del Norte')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(77,'SDS','Surigao del Sur')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(78,'BAS','Basilan')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(79,'LDS','Lanao del Sur')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(80,'MAG','Maguindanao')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(81,'SUL','Sulu')
+INSERT [gen].[Province] ([ProvinceId],[Code],[Description])VALUES(82,'TAW','Tawi-Tawi')
