@@ -1,260 +1,248 @@
-INSERT INTO gen.Country (CountryId, Alpha1, Alpha2, Name, AreaCode, Flag, Nationality)
-SELECT 
-    ROW_NUMBER() OVER (ORDER BY Name) AS CountryId,
-    Alpha1,
-    Alpha2,
-    Name,
-    AreaCode,
-    Flag,
-    Nationality
-FROM (
-    VALUES
-    ('AFG','AF','Afghanistan','+93',NULL,'Afghan'),
-    ('ALA','AX','Åland Islands','+358',NULL,'Åland Islander'),
-    ('ALB','AL','Albania','+355',NULL,'Albanian'),
-    ('DZA','DZ','Algeria','+213',NULL,'Algerian'),
-    ('ASM','AS','American Samoa','+1-684',NULL,'American Samoan'),
-    ('AND','AD','Andorra','+376',NULL,'Andorran'),
-    ('AGO','AO','Angola','+244',NULL,'Angolan'),
-    ('AIA','AI','Anguilla','+1-264',NULL,'Anguillian'),
-    ('ATA','AQ','Antarctica',NULL,NULL,'Antarctic'),
-    ('ATG','AG','Antigua and Barbuda','+1-268',NULL,'Antiguan or Barbudan'),
-    ('ARG','AR','Argentina','+54',NULL,'Argentine'),
-    ('ARM','AM','Armenia','+374',NULL,'Armenian'),
-    ('ABW','AW','Aruba','+297',NULL,'Aruban'),
-    ('AUS','AU','Australia','+61',NULL,'Australian'),
-    ('AUT','AT','Austria','+43',NULL,'Austrian'),
-    ('AZE','AZ','Azerbaijan','+994',NULL,'Azerbaijani'),
-    ('BHS','BS','Bahamas','+1-242',NULL,'Bahamian'),
-    ('BHR','BH','Bahrain','+973',NULL,'Bahraini'),
-    ('BGD','BD','Bangladesh','+880',NULL,'Bangladeshi'),
-    ('BRB','BB','Barbados','+1-246',NULL,'Barbadian'),
-    ('BLR','BY','Belarus','+375',NULL,'Belarusian'),
-    ('BEL','BE','Belgium','+32',NULL,'Belgian'),
-    ('BLZ','BZ','Belize','+501',NULL,'Belizean'),
-    ('BEN','BJ','Benin','+229',NULL,'Beninese'),
-    ('BMU','BM','Bermuda','+1-441',NULL,'Bermudian'),
-    ('BTN','BT','Bhutan','+975',NULL,'Bhutanese'),
-    ('BOL','BO','Bolivia (Plurinational State of)','+591',NULL,'Bolivian'),
-    ('BES','BQ','Bonaire, Sint Eustatius and Saba','+599',NULL,'Dutch Caribbean'),
-    ('BIH','BA','Bosnia and Herzegovina','+387',NULL,'Bosnian or Herzegovinian'),
-    ('BWA','BW','Botswana','+267',NULL,'Botswanan'),
-    ('BVT','BV','Bouvet Island',NULL,NULL,'Bouvet Islander'),
-    ('BRA','BR','Brazil','+55',NULL,'Brazilian'),
-    ('IOT','IO','British Indian Ocean Territory','+246',NULL,'BIOT citizen'),
-    ('BRN','BN','Brunei Darussalam','+673',NULL,'Bruneian'),
-    ('BGR','BG','Bulgaria','+359',NULL,'Bulgarian'),
-    ('BFA','BF','Burkina Faso','+226',NULL,'Burkinabé'),
-    ('BDI','BI','Burundi','+257',NULL,'Burundian'),
-    ('CPV','CV','Cabo Verde','+238',NULL,'Cape Verdean'),
-    ('KHM','KH','Cambodia','+855',NULL,'Cambodian'),
-    ('CMR','CM','Cameroon','+237',NULL,'Cameroonian'),
-    ('CAN','CA','Canada','+1',NULL,'Canadian'),
-    ('CYM','KY','Cayman Islands','+1-345',NULL,'Caymanian'),
-    ('CAF','CF','Central African Republic','+236',NULL,'Central African'),
-    ('TCD','TD','Chad','+235',NULL,'Chadian'),
-    ('CHL','CL','Chile','+56',NULL,'Chilean'),
-    ('CHN','CN','China','+86',NULL,'Chinese'),
-    ('CXR','CX','Christmas Island','+61',NULL,'Christmas Islander'),
-    ('CCK','CC','Cocos (Keeling) Islands','+61',NULL,'Cocos Islander'),
-    ('COL','CO','Colombia','+57',NULL,'Colombian'),
-    ('COM','KM','Comoros','+269',NULL,'Comorian'),
-    ('COG','CG','Congo','+242',NULL,'Congolese'),
-    ('COD','CD','Congo, Democratic Republic of the','+243',NULL,'Congolese'),
-    ('COK','CK','Cook Islands','+682',NULL,'Cook Islander'),
-    ('CRI','CR','Costa Rica','+506',NULL,'Costa Rican'),
-    ('CIV','CI','Côte d''Ivoire','+225',NULL,'Ivorian'),
-    ('HRV','HR','Croatia','+385',NULL,'Croatian'),
-    ('CUB','CU','Cuba','+53',NULL,'Cuban'),
-    ('CUW','CW','Curaçao','+599',NULL,'Curaçaoan'),
-    ('CYP','CY','Cyprus','+357',NULL,'Cypriot'),
-    ('CZE','CZ','Czechia','+420',NULL,'Czech'),
-    ('DNK','DK','Denmark','+45',NULL,'Danish'),
-    ('DJI','DJ','Djibouti','+253',NULL,'Djiboutian'),
-    ('DMA','DM','Dominica','+1-767',NULL,'Dominican (Dominica)'),
-    ('DOM','DO','Dominican Republic','+1-809',NULL,'Dominican'),
-    ('ECU','EC','Ecuador','+593',NULL,'Ecuadorian'),
-    ('EGY','EG','Egypt','+20',NULL,'Egyptian'),
-    ('SLV','SV','El Salvador','+503',NULL,'Salvadoran'),
-    ('GNQ','GQ','Equatorial Guinea','+240',NULL,'Equatoguinean'),
-    ('ERI','ER','Eritrea','+291',NULL,'Eritrean'),
-    ('EST','EE','Estonia','+372',NULL,'Estonian'),
-    ('SWZ','SZ','Eswatini','+268',NULL,'Swazi'),
-    ('ETH','ET','Ethiopia','+251',NULL,'Ethiopian'),
-    ('FLK','FK','Falkland Islands [Malvinas]','+500',NULL,'Falkland Islander'),
-    ('FRO','FO','Faroe Islands','+298',NULL,'Faroese'),
-    ('FJI','FJ','Fiji','+679',NULL,'Fijian'),
-    ('FIN','FI','Finland','+358',NULL,'Finnish'),
-    ('FRA','FR','France','+33',NULL,'French'),
-    ('GUF','GF','French Guiana','+594',NULL,'French Guianan'),
-    ('PYF','PF','French Polynesia','+689',NULL,'French Polynesian'),
-    ('ATF','TF','French Southern Territories',NULL,NULL,'French Southern Territories'),
-    ('GAB','GA','Gabon','+241',NULL,'Gabonese'),
-    ('GMB','GM','Gambia','+220',NULL,'Gambian'),
-    ('GEO','GE','Georgia','+995',NULL,'Georgian'),
-    ('DEU','DE','Germany','+49',NULL,'German'),
-    ('GHA','GH','Ghana','+233',NULL,'Ghanaian'),
-    ('GIB','GI','Gibraltar','+350',NULL,'Gibraltarian'),
-    ('GRC','GR','Greece','+30',NULL,'Greek'),
-    ('GRL','GL','Greenland','+299',NULL,'Greenlander'),
-    ('GRD','GD','Grenada','+1-473',NULL,'Grenadian'),
-    ('GLP','GP','Guadeloupe','+590',NULL,'Guadeloupean'),
-    ('GUM','GU','Guam','+1-671',NULL,'Guamanian'),
-    ('GTM','GT','Guatemala','+502',NULL,'Guatemalan'),
-    ('GGY','GG','Guernsey','+44',NULL,'Channel Islander'),
-    ('GIN','GN','Guinea','+224',NULL,'Guinean'),
-    ('GNB','GW','Guinea-Bissau','+245',NULL,'Bissau-Guinean'),
-    ('GUY','GY','Guyana','+592',NULL,'Guyanese'),
-    ('HTI','HT','Haiti','+509',NULL,'Haitian'),
-    ('HMD','HM','Heard Island and McDonald Islands',NULL,NULL,'Heard Islander'),
-    ('VAT','VA','Holy See','+39',NULL,'Vatican citizen'),
-    ('HND','HN','Honduras','+504',NULL,'Honduran'),
-    ('HKG','HK','Hong Kong','+852',NULL,'Hong Konger'),
-    ('HUN','HU','Hungary','+36',NULL,'Hungarian'),
-    ('ISL','IS','Iceland','+354',NULL,'Icelander'),
-    ('IND','IN','India','+91',NULL,'Indian'),
-    ('IDN','ID','Indonesia','+62',NULL,'Indonesian'),
-    ('IRN','IR','Iran (Islamic Republic of)','+98',NULL,'Iranian'),
-    ('IRQ','IQ','Iraq','+964',NULL,'Iraqi'),
-    ('IRL','IE','Ireland','+353',NULL,'Irish'),
-    ('IMN','IM','Isle of Man','+44',NULL,'Manx'),
-    ('ISR','IL','Israel','+972',NULL,'Israeli'),
-    ('ITA','IT','Italy','+39',NULL,'Italian'),
-    ('JAM','JM','Jamaica','+1-876',NULL,'Jamaican'),
-    ('JPN','JP','Japan','+81',NULL,'Japanese'),
-    ('JEY','JE','Jersey','+44',NULL,'Channel Islander'),
-    ('JOR','JO','Jordan','+962',NULL,'Jordanian'),
-    ('KAZ','KZ','Kazakhstan','+7',NULL,'Kazakhstani'),
-    ('KEN','KE','Kenya','+254',NULL,'Kenyan'),
-    ('KIR','KI','Kiribati','+686',NULL,'I-Kiribati'),
-    ('PRK','KP','Korea (Democratic People''s Republic of)','+850',NULL,'North Korean'),
-    ('KOR','KR','Korea, Republic of','+82',NULL,'South Korean'),
-    ('KWT','KW','Kuwait','+965',NULL,'Kuwaiti'),
-    ('KGZ','KG','Kyrgyzstan','+996',NULL,'Kyrgyz'),
-    ('LAO','LA','Lao People''s Democratic Republic','+856',NULL,'Lao'),
-    ('LVA','LV','Latvia','+371',NULL,'Latvian'),
-    ('LBN','LB','Lebanon','+961',NULL,'Lebanese'),
-    ('LSO','LS','Lesotho','+266',NULL,'Basotho'),
-    ('LBR','LR','Liberia','+231',NULL,'Liberian'),
-    ('LBY','LY','Libya','+218',NULL,'Libyan'),
-    ('LIE','LI','Liechtenstein','+423',NULL,'Liechtensteiner'),
-    ('LTU','LT','Lithuania','+370',NULL,'Lithuanian'),
-    ('LUX','LU','Luxembourg','+352',NULL,'Luxembourger'),
-    ('MAC','MO','Macao','+853',NULL,'Macanese'),
-    ('MDG','MG','Madagascar','+261',NULL,'Malagasy'),
-    ('MWI','MW','Malawi','+265',NULL,'Malawian'),
-    ('MYS','MY','Malaysia','+60',NULL,'Malaysian'),
-    ('MDV','MV','Maldives','+960',NULL,'Maldivian'),
-    ('MLI','ML','Mali','+223',NULL,'Malian'),
-    ('MLT','MT','Malta','+356',NULL,'Maltese'),
-    ('MHL','MH','Marshall Islands','+692',NULL,'Marshallese'),
-    ('MTQ','MQ','Martinique','+596',NULL,'Martiniquais'),
-    ('MRT','MR','Mauritania','+222',NULL,'Mauritanian'),
-    ('MUS','MU','Mauritius','+230',NULL,'Mauritian'),
-    ('MYT','YT','Mayotte','+262',NULL,'Mahoran'),
-    ('MEX','MX','Mexico','+52',NULL,'Mexican'),
-    ('FSM','FM','Micronesia (Federated States of)','+691',NULL,'Micronesian'),
-    ('MDA','MD','Moldova, Republic of','+373',NULL,'Moldovan'),
-    ('MCO','MC','Monaco','+377',NULL,'Monegasque'),
-    ('MNG','MN','Mongolia','+976',NULL,'Mongolian'),
-    ('MNE','ME','Montenegro','+382',NULL,'Montenegrin'),
-    ('MSR','MS','Montserrat','+1-664',NULL,'Montserratian'),
-    ('MAR','MA','Morocco','+212',NULL,'Moroccan'),
-    ('MOZ','MZ','Mozambique','+258',NULL,'Mozambican'),
-    ('MMR','MM','Myanmar','+95',NULL,'Burmese'),
-    ('NAM','NA','Namibia','+264',NULL,'Namibian'),
-    ('NRU','NR','Nauru','+674',NULL,'Nauruan'),
-    ('NPL','NP','Nepal','+977',NULL,'Nepali'),
-    ('NLD','NL','Netherlands','+31',NULL,'Dutch'),
-    ('NCL','NC','New Caledonia','+687',NULL,'New Caledonian'),
-    ('NZL','NZ','New Zealand','+64',NULL,'New Zealander'),
-    ('NIC','NI','Nicaragua','+505',NULL,'Nicaraguan'),
-    ('NER','NE','Niger','+227',NULL,'Nigerien'),
-    ('NGA','NG','Nigeria','+234',NULL,'Nigerian'),
-    ('NIU','NU','Niue','+683',NULL,'Niuean'),
-    ('NFK','NF','Norfolk Island','+672',NULL,'Norfolk Islander'),
-    ('MNP','MP','Northern Mariana Islands','+1-670',NULL,'Northern Marianan'),
-    ('NOR','NO','Norway','+47',NULL,'Norwegian'),
-    ('OMN','OM','Oman','+968',NULL,'Omani'),
-    ('PAK','PK','Pakistan','+92',NULL,'Pakistani'),
-    ('PLW','PW','Palau','+680',NULL,'Palauan'),
-    ('PSE','PS','Palestine, State of','+970',NULL,'Palestinian'),
-    ('PAN','PA','Panama','+507',NULL,'Panamanian'),
-    ('PNG','PG','Papua New Guinea','+675',NULL,'Papua New Guinean'),
-    ('PRY','PY','Paraguay','+595',NULL,'Paraguayan'),
-    ('PER','PE','Peru','+51',NULL,'Peruvian'),
-    ('PHL','PH','Philippines','+63',NULL,'Filipino'),
-    ('PCN','PN','Pitcairn','+870',NULL,'Pitcairn Islander'),
-    ('POL','PL','Poland','+48',NULL,'Polish'),
-    ('PRT','PT','Portugal','+351',NULL,'Portuguese'),
-    ('PRI','PR','Puerto Rico','+1-787',NULL,'Puerto Rican'),
-    ('QAT','QA','Qatar','+974',NULL,'Qatari'),
-    ('REU','RE','Réunion','+262',NULL,'Réunionese'),
-    ('ROU','RO','Romania','+40',NULL,'Romanian'),
-    ('RUS','RU','Russian Federation','+7',NULL,'Russian'),
-    ('RWA','RW','Rwanda','+250',NULL,'Rwandan'),
-    ('BLM','BL','Saint Barthélemy','+590',NULL,'Saint Barthélemy islander'),
-    ('SHN','SH','Saint Helena, Ascension and Tristan da Cunha','+290',NULL,'Saint Helenian'),
-    ('KNA','KN','Saint Kitts and Nevis','+1-869',NULL,'Kittitian or Nevisian'),
-    ('LCA','LC','Saint Lucia','+1-758',NULL,'Saint Lucian'),
-    ('MAF','MF','Saint Martin (French part)','+590',NULL,'Saint-Martinois'),
-    ('SPM','PM','Saint Pierre and Miquelon','+508',NULL,'Saint-Pierrais or Miquelonnais'),
-    ('VCT','VC','Saint Vincent and the Grenadines','+1-784',NULL,'Saint Vincentian'),
-    ('WSM','WS','Samoa','+685',NULL,'Samoan'),
-    ('SMR','SM','San Marino','+378',NULL,'Sammarinese'),
-    ('STP','ST','Sao Tome and Principe','+239',NULL,'São Toméan'),
-    ('SAU','SA','Saudi Arabia','+966',NULL,'Saudi'),
-    ('SEN','SN','Senegal','+221',NULL,'Senegalese'),
-    ('SRB','RS','Serbia','+381',NULL,'Serbian'),
-    ('SYC','SC','Seychelles','+248',NULL,'Seychellois'),
-    ('SLE','SL','Sierra Leone','+232',NULL,'Sierra Leonean'),
-    ('SGP','SG','Singapore','+65',NULL,'Singaporean'),
-    ('SXM','SX','Sint Maarten (Dutch part)','+1-721',NULL,'Sint Maartener'),
-    ('SVK','SK','Slovakia','+421',NULL,'Slovak'),
-    ('SVN','SI','Slovenia','+386',NULL,'Slovenian'),
-    ('SLB','SB','Solomon Islands','+677',NULL,'Solomon Islander'),
-    ('SOM','SO','Somalia','+252',NULL,'Somali'),
-    ('ZAF','ZA','South Africa','+27',NULL,'South African'),
-    ('SGS','GS','South Georgia and the South Sandwich Islands',NULL,NULL,'South Georgia Islander'),
-    ('SSD','SS','South Sudan','+211',NULL,'South Sudanese'),
-    ('ESP','ES','Spain','+34',NULL,'Spanish'),
-    ('LKA','LK','Sri Lanka','+94',NULL,'Sri Lankan'),
-    ('SDN','SD','Sudan','+249',NULL,'Sudanese'),
-    ('SUR','SR','Suriname','+597',NULL,'Surinamese'),
-    ('SJM','SJ','Svalbard and Jan Mayen','+47',NULL,'Svalbard Islander'),
-    ('SWE','SE','Sweden','+46',NULL,'Swedish'),
-    ('CHE','CH','Switzerland','+41',NULL,'Swiss'),
-    ('SYR','SY','Syrian Arab Republic','+963',NULL,'Syrian'),
-    ('TWN','TW','Taiwan','+886',NULL,'Taiwanese'),
-    ('TJK','TJ','Tajikistan','+992',NULL,'Tajikistani'),
-    ('TZA','TZ','Tanzania, United Republic of','+255',NULL,'Tanzanian'),
-    ('THA','TH','Thailand','+66',NULL,'Thai'),
-    ('TLS','TL','Timor-Leste','+670',NULL,'Timorese'),
-    ('TGO','TG','Togo','+228',NULL,'Togolese'),
-    ('TKL','TK','Tokelau','+690',NULL,'Tokelauan'),
-    ('TON','TO','Tonga','+676',NULL,'Tongan'),
-    ('TTO','TT','Trinidad and Tobago','+1-868',NULL,'Trinidadian or Tobagonian'),
-    ('TUN','TN','Tunisia','+216',NULL,'Tunisian'),
-    ('TUR','TR','Türkiye','+90',NULL,'Turkish'),
-    ('TKM','TM','Turkmenistan','+993',NULL,'Turkmen'),
-    ('TCA','TC','Turks and Caicos Islands','+1-649',NULL,'Turks and Caicos Islander'),
-    ('TUV','TV','Tuvalu','+688',NULL,'Tuvaluan'),
-    ('UGA','UG','Uganda','+256',NULL,'Ugandan'),
-    ('UKR','UA','Ukraine','+380',NULL,'Ukrainian'),
-    ('ARE','AE','United Arab Emirates','+971',NULL,'Emirati'),
-    ('GBR','GB','United Kingdom of Great Britain and Northern Ireland','+44',NULL,'British'),
-    ('USA','US','United States of America','+1',NULL,'American'),
-    ('UMI','UM','United States Minor Outlying Islands',NULL,NULL,'US Islander'),
-    ('URY','UY','Uruguay','+598',NULL,'Uruguayan'),
-    ('UZB','UZ','Uzbekistan','+998',NULL,'Uzbekistani'),
-    ('VUT','VU','Vanuatu','+678',NULL,'Ni-Vanuatu'),
-    ('VEN','VE','Venezuela (Bolivarian Republic of)','+58',NULL,'Venezuelan'),
-    ('VNM','VN','Viet Nam','+84',NULL,'Vietnamese'),
-    ('VGB','VG','Virgin Islands (British)','+1-284',NULL,'British Virgin Islander'),
-    ('VIR','VI','Virgin Islands (U.S.)','+1-340',NULL,'U.S. Virgin Islander'),
-    ('WLF','WF','Wallis and Futuna','+681',NULL,'Wallisian or Futunan'),
-    ('ESH','EH','Western Sahara','+212',NULL,'Sahrawi'),
-    ('YEM','YE','Yemen','+967',NULL,'Yemeni'),
-    ('ZMB','ZM','Zambia','+260',NULL,'Zambian'),
-    ('ZWE','ZW','Zimbabwe','+263',NULL,'Zimbabwean')
-) AS v(Alpha1, Alpha2, Name, AreaCode, Flag, Nationality);
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(1,'AFG','AF','Afghanistan','+93','Afghan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(2,'ALA','AX','Åland Islands','+358','Åland Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(3,'ALB','AL','Albania','+355','Albanian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(4,'DZA','DZ','Algeria','+213','Algerian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(5,'ASM','AS','American Samoa','+1-684','American Samoan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(6,'AND','AD','Andorra','+376','Andorran')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(7,'AGO','AO','Angola','+244','Angolan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(8,'AIA','AI','Anguilla','+1-264','Anguillian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(9,'ATA','AQ','Antarctica',NULL,'Antarctic')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(10,'ATG','AG','Antigua and Barbuda','+1-268','Antiguan or Barbudan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(11,'ARG','AR','Argentina','+54','Argentine')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(12,'ARM','AM','Armenia','+374','Armenian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(13,'ABW','AW','Aruba','+297','Aruban')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(14,'AUS','AU','Australia','+61','Australian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(15,'AUT','AT','Austria','+43','Austrian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(16,'AZE','AZ','Azerbaijan','+994','Azerbaijani')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(17,'BHS','BS','Bahamas','+1-242','Bahamian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(18,'BHR','BH','Bahrain','+973','Bahraini')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(19,'BGD','BD','Bangladesh','+880','Bangladeshi')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(20,'BRB','BB','Barbados','+1-246','Barbadian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(21,'BLR','BY','Belarus','+375','Belarusian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(22,'BEL','BE','Belgium','+32','Belgian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(23,'BLZ','BZ','Belize','+501','Belizean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(24,'BEN','BJ','Benin','+229','Beninese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(25,'BMU','BM','Bermuda','+1-441','Bermudian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(26,'BTN','BT','Bhutan','+975','Bhutanese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(27,'BOL','BO','Bolivia (Plurinational State of)','+591','Bolivian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(28,'BES','BQ','Bonaire, Sint Eustatius and Saba','+599','Dutch Caribbean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(29,'BIH','BA','Bosnia and Herzegovina','+387','Bosnian or Herzegovinian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(30,'BWA','BW','Botswana','+267','Botswanan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(31,'BVT','BV','Bouvet Island',NULL,'Bouvet Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(32,'BRA','BR','Brazil','+55','Brazilian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(33,'IOT','IO','British Indian Ocean Territory','+246','BIOT citizen')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(34,'BRN','BN','Brunei Darussalam','+673','Bruneian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(35,'BGR','BG','Bulgaria','+359','Bulgarian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(36,'BFA','BF','Burkina Faso','+226','Burkinabé')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(37,'BDI','BI','Burundi','+257','Burundian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(38,'CPV','CV','Cabo Verde','+238','Cape Verdean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(39,'KHM','KH','Cambodia','+855','Cambodian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(40,'CMR','CM','Cameroon','+237','Cameroonian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(41,'CAN','CA','Canada','+1','Canadian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(42,'CYM','KY','Cayman Islands','+1-345','Caymanian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(43,'CAF','CF','Central African Republic','+236','Central African')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(44,'TCD','TD','Chad','+235','Chadian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(45,'CHL','CL','Chile','+56','Chilean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(46,'CHN','CN','China','+86','Chinese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(47,'CXR','CX','Christmas Island','+61','Christmas Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(48,'CCK','CC','Cocos (Keeling) Islands','+61','Cocos Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(49,'COL','CO','Colombia','+57','Colombian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(50,'COM','KM','Comoros','+269','Comorian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(51,'COG','CG','Congo','+242','Congolese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(52,'COD','CD','Congo, Democratic Republic of the','+243','Congolese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(53,'COK','CK','Cook Islands','+682','Cook Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(54,'CRI','CR','Costa Rica','+506','Costa Rican')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(55,'CIV','CI','Côte d''Ivoire','+225','Ivorian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(56,'HRV','HR','Croatia','+385','Croatian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(57,'CUB','CU','Cuba','+53','Cuban')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(58,'CUW','CW','Curaçao','+599','Curaçaoan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(59,'CYP','CY','Cyprus','+357','Cypriot')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(60,'CZE','CZ','Czechia','+420','Czech')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(61,'DNK','DK','Denmark','+45','Danish')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(62,'DJI','DJ','Djibouti','+253','Djiboutian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(63,'DMA','DM','Dominica','+1-767','Dominican (Dominica)')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(64,'DOM','DO','Dominican Republic','+1-809','Dominican')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(65,'ECU','EC','Ecuador','+593','Ecuadorian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(66,'EGY','EG','Egypt','+20','Egyptian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(67,'SLV','SV','El Salvador','+503','Salvadoran')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(68,'GNQ','GQ','Equatorial Guinea','+240','Equatoguinean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(69,'ERI','ER','Eritrea','+291','Eritrean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(70,'EST','EE','Estonia','+372','Estonian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(71,'SWZ','SZ','Eswatini','+268','Swazi')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(72,'ETH','ET','Ethiopia','+251','Ethiopian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(73,'FLK','FK','Falkland Islands [Malvinas]','+500','Falkland Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(74,'FRO','FO','Faroe Islands','+298','Faroese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(75,'FJI','FJ','Fiji','+679','Fijian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(76,'FIN','FI','Finland','+358','Finnish')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(77,'FRA','FR','France','+33','French')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(78,'GUF','GF','French Guiana','+594','French Guianan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(79,'PYF','PF','French Polynesia','+689','French Polynesian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(80,'ATF','TF','French Southern Territories',NULL,'French Southern Territories')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(81,'GAB','GA','Gabon','+241','Gabonese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(82,'GMB','GM','Gambia','+220','Gambian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(83,'GEO','GE','Georgia','+995','Georgian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(84,'DEU','DE','Germany','+49','German')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(85,'GHA','GH','Ghana','+233','Ghanaian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(86,'GIB','GI','Gibraltar','+350','Gibraltarian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(87,'GRC','GR','Greece','+30','Greek')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(88,'GRL','GL','Greenland','+299','Greenlander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(89,'GRD','GD','Grenada','+1-473','Grenadian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(90,'GLP','GP','Guadeloupe','+590','Guadeloupean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(91,'GUM','GU','Guam','+1-671','Guamanian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(92,'GTM','GT','Guatemala','+502','Guatemalan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(93,'GGY','GG','Guernsey','+44','Channel Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(94,'GIN','GN','Guinea','+224','Guinean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(95,'GNB','GW','Guinea-Bissau','+245','Bissau-Guinean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(96,'GUY','GY','Guyana','+592','Guyanese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(97,'HTI','HT','Haiti','+509','Haitian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(98,'HMD','HM','Heard Island and McDonald Islands',NULL,'Heard Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(99,'VAT','VA','Holy See','+39','Vatican citizen')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(100,'HND','HN','Honduras','+504','Honduran')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(101,'HKG','HK','Hong Kong','+852','Hong Konger')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(102,'HUN','HU','Hungary','+36','Hungarian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(103,'ISL','IS','Iceland','+354','Icelander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(104,'IND','IN','India','+91','Indian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(105,'IDN','ID','Indonesia','+62','Indonesian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(106,'IRN','IR','Iran (Islamic Republic of)','+98','Iranian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(107,'IRQ','IQ','Iraq','+964','Iraqi')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(108,'IRL','IE','Ireland','+353','Irish')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(109,'IMN','IM','Isle of Man','+44','Manx')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(110,'ISR','IL','Israel','+972','Israeli')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(111,'ITA','IT','Italy','+39','Italian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(112,'JAM','JM','Jamaica','+1-876','Jamaican')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(113,'JPN','JP','Japan','+81','Japanese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(114,'JEY','JE','Jersey','+44','Channel Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(115,'JOR','JO','Jordan','+962','Jordanian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(116,'KAZ','KZ','Kazakhstan','+7','Kazakhstani')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(117,'KEN','KE','Kenya','+254','Kenyan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(118,'KIR','KI','Kiribati','+686','I-Kiribati')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(119,'PRK','KP','Korea (Democratic People''s Republic of)','+850','North Korean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(120,'KOR','KR','Korea, Republic of','+82','South Korean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(121,'KWT','KW','Kuwait','+965','Kuwaiti')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(122,'KGZ','KG','Kyrgyzstan','+996','Kyrgyz')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(123,'LAO','LA','Lao People''s Democratic Republic','+856','Lao')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(124,'LVA','LV','Latvia','+371','Latvian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(125,'LBN','LB','Lebanon','+961','Lebanese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(126,'LSO','LS','Lesotho','+266','Basotho')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(127,'LBR','LR','Liberia','+231','Liberian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(128,'LBY','LY','Libya','+218','Libyan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(129,'LIE','LI','Liechtenstein','+423','Liechtensteiner')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(130,'LTU','LT','Lithuania','+370','Lithuanian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(131,'LUX','LU','Luxembourg','+352','Luxembourger')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(132,'MAC','MO','Macao','+853','Macanese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(133,'MDG','MG','Madagascar','+261','Malagasy')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(134,'MWI','MW','Malawi','+265','Malawian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(135,'MYS','MY','Malaysia','+60','Malaysian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(136,'MDV','MV','Maldives','+960','Maldivian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(137,'MLI','ML','Mali','+223','Malian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(138,'MLT','MT','Malta','+356','Maltese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(139,'MHL','MH','Marshall Islands','+692','Marshallese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(140,'MTQ','MQ','Martinique','+596','Martiniquais')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(141,'MRT','MR','Mauritania','+222','Mauritanian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(142,'MUS','MU','Mauritius','+230','Mauritian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(143,'MYT','YT','Mayotte','+262','Mahoran')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(144,'MEX','MX','Mexico','+52','Mexican')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(145,'FSM','FM','Micronesia (Federated States of)','+691','Micronesian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(146,'MDA','MD','Moldova, Republic of','+373','Moldovan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(147,'MCO','MC','Monaco','+377','Monegasque')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(148,'MNG','MN','Mongolia','+976','Mongolian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(149,'MNE','ME','Montenegro','+382','Montenegrin')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(150,'MSR','MS','Montserrat','+1-664','Montserratian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(151,'MAR','MA','Morocco','+212','Moroccan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(152,'MOZ','MZ','Mozambique','+258','Mozambican')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(153,'MMR','MM','Myanmar','+95','Burmese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(154,'NAM','NA','Namibia','+264','Namibian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(155,'NRU','NR','Nauru','+674','Nauruan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(156,'NPL','NP','Nepal','+977','Nepali')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(157,'NLD','NL','Netherlands','+31','Dutch')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(158,'NCL','NC','New Caledonia','+687','New Caledonian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(159,'NZL','NZ','New Zealand','+64','New Zealander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(160,'NIC','NI','Nicaragua','+505','Nicaraguan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(161,'NER','NE','Niger','+227','Nigerien')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(162,'NGA','NG','Nigeria','+234','Nigerian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(163,'NIU','NU','Niue','+683','Niuean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(164,'NFK','NF','Norfolk Island','+672','Norfolk Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(165,'MNP','MP','Northern Mariana Islands','+1-670','Northern Marianan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(166,'NOR','NO','Norway','+47','Norwegian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(167,'OMN','OM','Oman','+968','Omani')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(168,'PAK','PK','Pakistan','+92','Pakistani')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(169,'PLW','PW','Palau','+680','Palauan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(170,'PSE','PS','Palestine, State of','+970','Palestinian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(171,'PAN','PA','Panama','+507','Panamanian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(172,'PNG','PG','Papua New Guinea','+675','Papua New Guinean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(173,'PRY','PY','Paraguay','+595','Paraguayan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(174,'PER','PE','Peru','+51','Peruvian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(175,'PHL','PH','Philippines','+63','Filipino')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(176,'PCN','PN','Pitcairn','+870','Pitcairn Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(177,'POL','PL','Poland','+48','Polish')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(178,'PRT','PT','Portugal','+351','Portuguese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(179,'PRI','PR','Puerto Rico','+1-787','Puerto Rican')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(180,'QAT','QA','Qatar','+974','Qatari')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(181,'REU','RE','Réunion','+262','Réunionese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(182,'ROU','RO','Romania','+40','Romanian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(183,'RUS','RU','Russian Federation','+7','Russian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(184,'RWA','RW','Rwanda','+250','Rwandan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(185,'BLM','BL','Saint Barthélemy','+590','Saint Barthélemy islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(186,'SHN','SH','Saint Helena, Ascension and Tristan da Cunha','+290','Saint Helenian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(187,'KNA','KN','Saint Kitts and Nevis','+1-869','Kittitian or Nevisian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(188,'LCA','LC','Saint Lucia','+1-758','Saint Lucian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(189,'MAF','MF','Saint Martin (French part)','+590','Saint-Martinois')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(190,'SPM','PM','Saint Pierre and Miquelon','+508','Saint-Pierrais or Miquelonnais')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(191,'VCT','VC','Saint Vincent and the Grenadines','+1-784','Saint Vincentian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(192,'WSM','WS','Samoa','+685','Samoan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(193,'SMR','SM','San Marino','+378','Sammarinese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(194,'STP','ST','Sao Tome and Principe','+239','São Toméan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(195,'SAU','SA','Saudi Arabia','+966','Saudi')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(196,'SEN','SN','Senegal','+221','Senegalese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(197,'SRB','RS','Serbia','+381','Serbian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(198,'SYC','SC','Seychelles','+248','Seychellois')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(199,'SLE','SL','Sierra Leone','+232','Sierra Leonean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(200,'SGP','SG','Singapore','+65','Singaporean')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(201,'SXM','SX','Sint Maarten (Dutch part)','+1-721','Sint Maartener')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(202,'SVK','SK','Slovakia','+421','Slovak')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(203,'SVN','SI','Slovenia','+386','Slovenian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(204,'SLB','SB','Solomon Islands','+677','Solomon Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(205,'SOM','SO','Somalia','+252','Somali')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(206,'ZAF','ZA','South Africa','+27','South African')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(207,'SGS','GS','South Georgia and the South Sandwich Islands',NULL,'South Georgia Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(208,'SSD','SS','South Sudan','+211','South Sudanese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(209,'ESP','ES','Spain','+34','Spanish')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(210,'LKA','LK','Sri Lanka','+94','Sri Lankan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(211,'SDN','SD','Sudan','+249','Sudanese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(212,'SUR','SR','Suriname','+597','Surinamese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(213,'SJM','SJ','Svalbard and Jan Mayen','+47','Svalbard Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(214,'SWE','SE','Sweden','+46','Swedish')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(215,'CHE','CH','Switzerland','+41','Swiss')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(216,'SYR','SY','Syrian Arab Republic','+963','Syrian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(217,'TWN','TW','Taiwan','+886','Taiwanese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(218,'TJK','TJ','Tajikistan','+992','Tajikistani')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(219,'TZA','TZ','Tanzania, United Republic of','+255','Tanzanian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(220,'THA','TH','Thailand','+66','Thai')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(221,'TLS','TL','Timor-Leste','+670','Timorese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(222,'TGO','TG','Togo','+228','Togolese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(223,'TKL','TK','Tokelau','+690','Tokelauan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(224,'TON','TO','Tonga','+676','Tongan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(225,'TTO','TT','Trinidad and Tobago','+1-868','Trinidadian or Tobagonian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(226,'TUN','TN','Tunisia','+216','Tunisian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(227,'TUR','TR','Türkiye','+90','Turkish')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(228,'TKM','TM','Turkmenistan','+993','Turkmen')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(229,'TCA','TC','Turks and Caicos Islands','+1-649','Turks and Caicos Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(230,'TUV','TV','Tuvalu','+688','Tuvaluan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(231,'UGA','UG','Uganda','+256','Ugandan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(232,'UKR','UA','Ukraine','+380','Ukrainian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(233,'ARE','AE','United Arab Emirates','+971','Emirati')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(234,'GBR','GB','United Kingdom of Great Britain and Northern Ireland','+44','British')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(235,'UMI','UM','United States Minor Outlying Islands',NULL,'US Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(236,'USA','US','United States of America','+1','American')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(237,'URY','UY','Uruguay','+598','Uruguayan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(238,'UZB','UZ','Uzbekistan','+998','Uzbekistani')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(239,'VUT','VU','Vanuatu','+678','Ni-Vanuatu')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(240,'VEN','VE','Venezuela (Bolivarian Republic of)','+58','Venezuelan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(241,'VNM','VN','Viet Nam','+84','Vietnamese')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(242,'VGB','VG','Virgin Islands (British)','+1-284','British Virgin Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(243,'VIR','VI','Virgin Islands (U.S.)','+1-340','U.S. Virgin Islander')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(244,'WLF','WF','Wallis and Futuna','+681','Wallisian or Futunan')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(245,'ESH','EH','Western Sahara','+212','Sahrawi')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(246,'YEM','YE','Yemen','+967','Yemeni')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(247,'ZMB','ZM','Zambia','+260','Zambian')
+INSERT [gen].[country] ([CountryId],[Alpha1],[Alpha2],[Name],[AreaCode],[Nationality])VALUES(248,'ZWE','ZW','Zimbabwe','+263','Zimbabwean')
